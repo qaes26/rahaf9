@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدينة رهف 3D - Rahaf Love City</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700;900&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Three.js Canvas Container -->
+    <canvas id="webgl"></canvas>
+
+    <!-- Overlay UI (Start Screen) -->
+    <div id="ui-overlay" class="overlay">
+      <div class="glass-card">
+        <div class="profile-pic-container">
+            <img src="./WhatsApp Image 2026-04-06 at 9.52.17 PM.jpeg" alt="Rahaf" class="profile-pic" id="profilePic">
+            <div class="glow-ring"></div>
+        </div>
+        <h1 class="title">R A H A F</h1>
+        <p class="subtitle">استكشف مدينة الأبراج السينمائية المخصصة لكِ.</p>
+        <button id="start-btn" class="glow-btn">
+          <span>دخول المدينة</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Interface in 3D Scene -->
+    <div id="hud" class="hud hidden">
+      <div class="hud-header">
+        <h2>عالم رهف الخاص</h2>
+        <div class="live-indicator">
+          <span class="dot"></span> LIVE
+        </div>
+      </div>
+
+      <div class="hud-footer">
+        <div class="ghazal-ticker">
+            <div class="ticker-content">
+                <span>رهف.. جمالك يزهو به كل مكان.. أنتِ ملكة هذا العالم.. عيونك بحر من الحب.. قلبك أطهر من الثلج.. جمالك فاق كل التوقعات.. كل برج هنا يحكي قصة حب لكِ..</span>
+                <span>رهف.. جمالك يزهو به كل مكان.. أنتِ ملكة هذا العالم.. عيونك بحر من الحب.. قلبك أطهر من الثلج.. جمالك فاق كل التوقعات.. كل برج هنا يحكي قصة حب لكِ..</span>
+            </div>
+        </div>
+      </div>
+
+      <div class="hud-controls">
+        <button id="auto-pilot-btn" class="hud-btn active">جولة حب</button>
+        <button id="manual-btn" class="hud-btn">استكشاف حر</button>
+      </div>
+    </div>
+
+    <!-- App Logic -->
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
